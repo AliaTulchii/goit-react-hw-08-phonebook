@@ -1,0 +1,15 @@
+.Filter__input{
+    width: 350px;
+    height: 30px;
+    margin-left: 16px;
+    margin-bottom: 24px;
+    padding-left: 16px;
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 24px;
+    background-color: rgba(0, 204, 255, 0.085);
+}
+
+.Filter__input::placeholder{
+    color: rgb(0, 204, 255);
+    
+}

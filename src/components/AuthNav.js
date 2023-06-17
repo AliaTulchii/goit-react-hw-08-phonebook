@@ -2,12 +2,18 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const styles = {
+  auth: {
+    marginLeft: 'auto',
+    marginRight: 24,
+  },
+
   link: {
     display: 'inline-block',
     textDecoration: 'none',
     padding: 12,
     fontWeight: 700,
-    color: '#2A363B',
+    fontSize: 20,
+    color: '#fff',
   },
   activeLink: {
     color: '#E84A5F',
@@ -16,7 +22,7 @@ const styles = {
 
 export default function AuthNav() {
   return (
-    <div>
+    <div style={styles.auth}>
       <NavLink
         to="/register"
         exact

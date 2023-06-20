@@ -4,13 +4,13 @@ import { FaTrashAlt } from 'react-icons/fa'
 import person from './person.png'
 import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux';
-import { removeContact } from 'features/contact/contactSlice';
+import { deleteContact } from 'features/contact/contacts-operations';
 
 const ContactListItem = ({ contact }) => {
     const dispatch = useDispatch();
 
     const deleteContactHandler = (id) => {
-        dispatch(removeContact(id))
+        dispatch(deleteContact(id))
     }
 
     return (

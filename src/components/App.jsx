@@ -1,13 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from "../pages/Home/Home";
-import Register from "../pages/Register";
-import Login from "../pages/Login";
-import Contacts from "../pages/Contacts";
-import { useDispatch } from 'react-redux';
+import Register from "../pages/Register/Register";
+import Login from "../pages/Login/Login";
+import Contacts from "../pages/Contacts/Contacts";
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import operations from 'features/auth/auth-operations';
 import Container from 'components/Container/Container';
 import AppBar from 'components/AppBar';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
+import authSelectors from 'features/auth/auth-selectors';
 
 
 
@@ -15,6 +18,7 @@ import AppBar from 'components/AppBar';
 
 const App = () => {
   const dispatch = useDispatch();
+  const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
 
   useEffect(() => {
     dispatch(operations.fetchCurrentUser());
@@ -22,15 +26,33 @@ const App = () => {
   
   return (      
   
-    <Container>
-      <AppBar />    
+    <Container >
+
+      <AppBar/>    
       
       
       <Routes>      
-          <Route path='/' element={<Home/>} />
-          <Route path="register" element={<Register/>} />
-          <Route path="login" element={<Login/>} />
-          <Route path="contacts" element={<Contacts/>} />        
+        <Route path='/' element={<Home />} />
+        
+        <Route path="/register" element={
+          <PublicRoute>
+          <Register/>
+          </PublicRoute>}
+        />
+        
+        <Route path="/login" element={
+          <PublicRoute>
+          <Login/>
+          </PublicRoute>}
+        />
+        
+        <Route path="/contacts" element={
+          <PrivateRoute >
+          <Contacts/>
+          </PrivateRoute>}
+        /> 
+        
+        
       </Routes>
     </Container>
     

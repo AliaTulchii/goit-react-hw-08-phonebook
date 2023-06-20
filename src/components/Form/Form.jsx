@@ -1,9 +1,9 @@
 import React from 'react';
 import css from './Form.module.css'
 import { useDispatch, useSelector } from "react-redux";
-import { addContact } from "features/contact/contactSlice";
 import { v4 } from 'uuid';
-import getContact from 'features/contact/getContact';
+import { addContact } from 'features/contact/contacts-operations';
+import { selectContacts } from 'features/contact/getContact';
 
 
 
@@ -13,7 +13,9 @@ const Form = () => {
     const dispatch = useDispatch()
     const [nameContact, setNameContact] = React.useState('')
     const [numberContact, setNumberContact] = React.useState('')
-    const contacts = useSelector(getContact)
+    const contacts = useSelector(selectContacts);
+    
+
 
     const addContactHandler = () => {
     

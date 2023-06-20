@@ -15,9 +15,6 @@ const styles = {
     fontSize: 20,
     color: '#fff',
   },
-  activeLink: {
-    color: '#E84A5F',
-  },
 };
 
 export default function AuthNav() {
@@ -27,7 +24,6 @@ export default function AuthNav() {
         to="/register"
         exact
         style={styles.link}
-        activeStyle={styles.activeLink}
       >
         Register
       </NavLink>
@@ -35,7 +31,6 @@ export default function AuthNav() {
         to="/login"
         exact
         style={styles.link}
-        activeStyle={styles.activeLink}
       >
         Login
       </NavLink>

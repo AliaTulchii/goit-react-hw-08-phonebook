@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import ContactListItem from './ContactListItem';
-import getContact from 'features/contact/getContact';
 import { useSelector } from 'react-redux';
 import getFilter from 'features/filter/getFilter';
+import  { selectContacts } from 'features/contact/getContact';
 
 
 const ContactList = () => {
-    const contacts = useSelector(getContact);
+    const contacts = useSelector(selectContacts);
     const filter = useSelector(getFilter);
 
     const getFiltered = () => {

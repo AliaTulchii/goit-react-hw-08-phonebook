@@ -1,0 +1,94 @@
+.RegisterBox{
+    width: 1000px;
+    height: 600px;
+    margin-top: 36px; 
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 24px; */
+    display: flex;
+    /* flex-direction: column; */
+    background-color: rgba(255, 255, 255, 0.811);
+    border-radius: 24px;
+    background-size: cover;
+    /* background-image: url('../../images/contact.png'); */
+}
+
+.RegisterContainer{
+    width: 600px;
+    height: 550px;
+    background-color: #ffffffe4;
+    margin-top: auto;
+    padding: 24px;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    text-align: center;
+}
+
+.RegisterTitle{
+    color: rgb(0, 204, 255);
+}
+
+.RegisterForm{
+    width: 420px; 
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;   
+}
+
+.RegisterLabel{
+    margin-bottom: 15px;
+    color: rgb(0, 204, 255);
+}
+
+.RegisterInput{
+    width: 300px;
+    height: 30px;
+    margin-left: 12px;
+    padding-left: 16px;
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 24px;
+    background-color: rgba(0, 204, 255, 0.085);
+}
+
+.RegisterButton{
+    width: 100px;
+    height: 30px;
+    margin-left: 35%;
+    margin-bottom: 16px;
+    color: rgb(0, 204, 255);
+    background-color: transparent;
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 24px;
+}
+
+.RegisterButton:hover,
+.RegisterButton:focus{
+   box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+   background-color: rgb(0, 204, 255);
+   color: white;
+}
+
+.RegisterImg{
+    width: 500px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+.RegisterText{
+    color: rgb(0, 204, 255);
+    font-size: 20px;
+}
+
+.RegisterLink{
+    color:rgb(22, 58, 176)
+}
+
+.RegisterLink:hover,
+.RegisterLink:focus{
+    color: white;
+    padding: 0 8px;
+    background-color: rgba(0, 204, 255, 0.479);
+    border-radius: 20px;
+}

@@ -12,10 +12,6 @@ const styles = {
     alignItems: 'center',
     border: '1px solid rgb(8, 209, 223)',
     backgroundColor: 'rgb(0, 204, 255)',
-    // display: 'flex',
-    // justifyContent: 'space-between',
-    // alignItems: 'center',
-    // borderBottom: '1px solid #2A363B',
   },
 };
 

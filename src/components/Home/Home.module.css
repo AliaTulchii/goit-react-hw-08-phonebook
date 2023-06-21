@@ -10,11 +10,11 @@
     border-radius: 24px;
 }
 
-/* .HomeImgBox{
+.HomeImgBox{
     width: 550px;
     height: 650px;
     margin-right: 24px;
-} */
+} 
 
 .HomeImg{
     width: 500px;
@@ -35,4 +35,4 @@
     height: 650px;
     padding: 16px;
     padding-top: 72px;
-} 
+}   

@@ -4,7 +4,7 @@ import css from './Home.module.css'
 
 
 
-const Home = () => (
+const HomePage = () => (
   <div className={css.HomeContainer}>
   <div className={css.HomeImgBox}>
       <img src={comfortZone} alt='' className={css.HomeImg}/>
@@ -19,4 +19,4 @@ const Home = () => (
   
 );
 
-export default Home;
+export default HomePage;
